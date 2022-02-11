@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Practice</title>
+</head>
+<body>
+    <h1>Cocktails</h1>
+    
+    <form action="{% url 'home' %}" method="get">
+      
+      <button type="submit" class="btn">Get Random Cocktail</button>
+     
+      </form>
+
+      <h1>{{ drink_name }}</h1>
+      <div>
+        <h3>Ingredients:</h3>
+        <p>{{ drink_ingredient1 }}</p>
+        <p>{{ drink_ingredient2 }}</p>
+         {% if drink_ingredient3 != None %}
+        <p> {{ drink_ingredient3 }}</p>
+         {% endif %}
+         {% if drink_ingredient4 != None %}
+        <p> {{ drink_ingredient4 }}</p>
+         {% endif %}
+         {% if drink_ingredient5 != None %}
+        <p> {{ drink_ingredient5 }}</p>
+         {% endif %}
+         {% if drink_ingredient6 != None %}
+        <p> {{ drink_ingredient6 }}</p>
+         {% endif %}
+        {% if drink_ingredient7 != None %}
+        <p> {{ drink_ingredient7 }}</p>
+         {% endif %}
+      </div>
+      <h3>Instructions:</h3>
+      <p>{{ drink_instructions }}</p>
+      <img src="{{ drink_pic }}">
+
+
+</body>
+</html>
