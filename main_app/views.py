@@ -17,6 +17,7 @@ def home(request):
         drink_ingredient5 = cocktail['drinks'][0]['strIngredient5']
         drink_ingredient6 = cocktail['drinks'][0]['strIngredient6']
         drink_ingredient7 = cocktail['drinks'][0]['strIngredient7']
+        drink_ingredient8 = cocktail['drinks'][0]['strIngredient8']
         return render(request, 'home.html', {
             'drink_name': drink_name, 
             'drink_instructions': drink_instructions, 
@@ -28,5 +29,6 @@ def home(request):
             'drink_ingredient5': drink_ingredient5,
             'drink_ingredient6': drink_ingredient6,
             'drink_ingredient7': drink_ingredient7,
+            'drink_ingredient8': drink_ingredient8,
             })
 
